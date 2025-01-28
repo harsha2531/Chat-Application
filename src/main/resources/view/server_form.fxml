@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="484.0" prefWidth="460.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.ServerController">
+    <VBox spacing="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
+        <ScrollPane fx:id="scrollPane" fitToWidth="true" prefHeight="427.0" prefWidth="509.0" VBox.vgrow="ALWAYS">
+            <VBox fx:id="messageVBox" spacing="10">
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10" />
+                </padding>
+            </VBox>
+        </ScrollPane>
+
+        <HBox spacing="10">
+            <TextField fx:id="txtMessage" onAction="#txtMessageOnAction" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnFile" onAction="#btnFileOnAction" text="File" />
+            <Button fx:id="btnSend" onAction="#btnSendOnAction" style="-fx-background-color: #11c747;" text="Send" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Button>
+        </HBox>
+    </VBox>
+</AnchorPane>
